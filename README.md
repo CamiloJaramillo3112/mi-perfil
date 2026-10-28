@@ -10,13 +10,12 @@
 Abre `index.html` en el navegador o abre la carpeta en VS Code y usa Live Server.
 
 ## Personalizar
-1. Cambia `TU-USUARIO` por tu usuario de GitHub.
-2. Cambia `TU-PERFIL` por la ruta de tu LinkedIn.
-3. Cambia `TU-CORREO@ejemplo.com` por tu correo real.
-4. Sustituye los ejemplos de proyectos por proyectos reales y agrega los enlaces de sus repositorios.
-5. Si quieres una foto, guárdala como `img/foto-perfil.png` y añade el elemento `<img>` donde prefieras.
+1. Utilizo mi `Usuario de GitHub`.
+2. Utilizo mi `perfil-linkedin`.
+3. Utilizo mi `correo real`.
+5. Guardo mi foto como `img/camilo-perfil.png` y añade el elemento `<img>` donde prefieras.
 
-Las tarjetas de proyectos son ejemplos de diseño, no afirman que todos los proyectos estén terminados. El portafolio se adapta a computadores, tabletas y móviles.
+El portafolio se adapta a computadores, tabletas y móviles.
 
 
 ## Fotografía de perfil
