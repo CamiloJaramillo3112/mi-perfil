@@ -1,127 +1,380 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portafolio de Camilo Jaramillo, egresado del CESDE y coder de RIWI.">
+  <meta name="theme-color" content="#0b1020">
   <title>Camilo Jaramillo | Portafolio</title>
+
+  <!-- Bootstrap 5.3.9 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+    crossorigin="anonymous"
+  >
+
+  <!-- Tipografías y estilos propios del portafolio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js" defer></script>
 </head>
+
 <body>
-<header class="header">
-  <nav class="nav wrap" aria-label="Navegación principal">
-    <a class="logo" href="#inicio">CJ<span>.</span></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#formacion">Formación</a></li><li><a href="#proyectos">Proyectos</a></li>
-      <li><a class="nav-contact" href="#contacto">Contacto ↗</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <section class="hero wrap" id="inicio">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand logo" href="#inicio" aria-label="Camilo Jaramillo, inicio">CJ<span>.</span></a>
 
-    <!-- IZQUIERDA: Presentación -->
-    <div class="hero-copy">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Abrir o cerrar el menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <p class="eyebrow">
-            <span class="dot"></span>
-            CODER EN RIWI · DESARROLLO DE SOFTWARE
-        </p>
-
-        <h1>
-            Hola, soy<br>
-            <span>Camilo Jaramillo.</span>
-        </h1>
-
-        <h2>Desarrollador de software en formación</h2>
-
-        <p class="lead">
-            Egresado del CESDE y coder de RIWI. Me interesa
-            crear aplicaciones web, conectar interfaces con
-            servicios backend y convertir problemas en
-            soluciones útiles.
-        </p>
-
-        <div class="actions">
-            <a class="btn primary" href="#proyectos">
-                Ver proyectos ↘
-            </a>
-
-            <a class="btn secondary" href="#contacto">
-                Hablemos
-            </a>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3 py-3 py-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#formacion">Formación</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li class="nav-item"><a class="btn btn-brand btn-sm ms-lg-2" href="#contacto">Contacto ↗</a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
+  </header>
 
-        <div class="tags">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>JavaScript</span>
-            <span>React</span>
-            <span>SQL Server</span>
-        </div>
+  <main>
+    <!-- Presentación -->
+    <section class="hero-section" id="inicio">
+      <div class="container py-5 py-lg-6">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <p class="eyebrow"><span class="status-dot"></span> CODER EN RIWI · DESARROLLO DE SOFTWARE</p>
+            <h1 class="display-2 hero-title fw-bold mb-3">Hola, soy<br><span>Camilo Jaramillo.</span></h1>
+            <h2 class="h4 hero-subtitle fw-medium mb-3">Desarrollador de software en formación</h2>
+            <p class="lead-copy mb-4">
+              Egresado del CESDE y coder de RIWI. Me interesa crear aplicaciones web,
+              conectar interfaces con servicios backend y convertir problemas en soluciones útiles.
+            </p>
 
-    </div>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a class="btn btn-brand btn-lg" href="#proyectos">Ver proyectos ↘</a>
+              <a class="btn btn-outline-light btn-lg btn-outline-soft" href="#contacto">Hablemos</a>
+            </div>
 
-    <!-- DERECHA: Fotografía -->
-    <div class="hero-photo">
-        <div class="photo-frame">
-            <img
+            <div class="d-flex flex-wrap gap-2" aria-label="Tecnologías principales">
+              <span class="badge tech-badge">Java</span>
+              <span class="badge tech-badge">Spring Boot</span>
+              <span class="badge tech-badge">JavaScript</span>
+              <span class="badge tech-badge">React</span>
+              <span class="badge tech-badge">SQL Server</span>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <figure class="profile-card mx-auto mb-0">
+              <img
+                class="img-fluid profile-image"
                 src="img/camilo-perfil.png"
-                alt="Fotografía de Camilo Jaramillo"
-            >
+                alt="Fotografía de perfil de Camilo Jaramillo"
+              >
+              <figcaption class="profile-caption">
+                <span class="status-dot"></span>
+                Coder en RIWI
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datos destacados -->
+    <section class="container stats-section py-4" aria-label="Resumen de perfil">
+      <div class="row row-cols-2 row-cols-md-4 g-3">
+        <div class="col stat-item"><strong>CESDE</strong><span>Formación técnica</span></div>
+        <div class="col stat-item"><strong>RIWI</strong><span>Formación actual</span></div>
+        <div class="col stat-item"><strong>Full stack</strong><span>Ruta profesional</span></div>
+        <div class="col stat-item"><strong>Aprendizaje</strong><span>Continuo</span></div>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="section-space container" id="sobre-mi">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-5">
+          <p class="eyebrow">01 / SOBRE MÍ</p>
+          <h2 class="section-title">Curiosidad técnica,<br><span>enfoque práctico.</span></h2>
+        </div>
+        <div class="col-lg-7">
+          <p class="section-copy">
+            Soy egresado del CESDE como <strong>Técnico Laboral por Competencias en Asistente en Desarrollo de Software</strong>
+            y actualmente continúo mi formación como coder de RIWI.
+          </p>
+          <p class="section-copy">
+            He estudiado tecnologías de frontend, backend y bases de datos. Busco fortalecer mis fundamentos
+            mediante proyectos prácticos, buenas prácticas y colaboración en equipo.
+          </p>
+
+          <aside class="card custom-card objective-card mt-4">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">✳</div>
+              <h3 class="h5 card-title">Mi objetivo</h3>
+              <p class="card-text mb-0">
+                Conseguir una oportunidad junior donde pueda aportar, aprender de un equipo
+                y construir software que resuelva necesidades reales.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="section-space section-surface" id="habilidades">
+      <div class="container">
+        <div class="section-heading mb-5">
+          <p class="eyebrow">02 / HABILIDADES</p>
+          <h2 class="section-title">Tecnologías que estoy<br><span>aprendiendo y practicando.</span></h2>
+          <p class="section-copy mb-0">
+            Conocimientos adquiridos en mi formación y cursos. Sigo reforzándolos con práctica y proyectos.
+          </p>
         </div>
 
-        <div class="photo-label">
-            <span class="dot"></span>
-            Coder en RIWI
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+          <div class="col">
+            <article class="card custom-card skill-card h-100">
+              <div class="card-body p-4">
+                <div class="tech-icon icon-orange">J</div>
+                <h3 class="h5">Java</h3>
+                <p class="card-text">Fundamentos de programación y orientación a objetos.</p>
+                <span class="skill-category">BACKEND</span>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card custom-card skill-card h-100">
+              <div class="card-body p-4">
+                <div class="tech-icon icon-green">SB</div>
+                <h3 class="h5">Spring Boot</h3>
+                <p class="card-text">Base para desarrollar servicios y aplicaciones backend.</p>
+                <span class="skill-category">BACKEND · API</span>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card custom-card skill-card h-100">
+              <div class="card-body p-4">
+                <div class="tech-icon icon-blue">JS</div>
+                <h3 class="h5">JavaScript</h3>
+                <p class="card-text">Lógica e interactividad para aplicaciones web.</p>
+                <span class="skill-category">FRONTEND</span>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card custom-card skill-card h-100">
+              <div class="card-body p-4">
+                <div class="tech-icon icon-cyan">⚛</div>
+                <h3 class="h5">React</h3>
+                <p class="card-text">Interfaces web construidas con componentes.</p>
+                <span class="skill-category">FRONTEND</span>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card custom-card skill-card h-100">
+              <div class="card-body p-4">
+                <div class="tech-icon icon-purple">SQL</div>
+                <h3 class="h5">SQL Server</h3>
+                <p class="card-text">Consultas y organización de información en bases de datos.</p>
+                <span class="skill-category">BASES DE DATOS</span>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card custom-card skill-card h-100">
+              <div class="card-body p-4">
+                <div class="tech-icon icon-gray">⌘</div>
+                <h3 class="h5">Git y GitHub</h3>
+                <p class="card-text">Control de versiones y publicación de proyectos.</p>
+                <span class="skill-category">HERRAMIENTAS</span>
+              </div>
+            </article>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-</section>
-  <section class="stats wrap"><div><b>CESDE</b><span>Formación técnica</span></div><div><b>RIWI</b><span>Formación actual</span></div><div><b>Full stack</b><span>Ruta profesional</span></div><div><b>Aprendizaje</b><span>Continuo</span></div></section>
-  <section class="section wrap" id="sobre-mi">
-    <div class="section-title"><p class="eyebrow">01 / SOBRE MÍ</p><h2>Curiosidad técnica,<br><span>enfoque práctico.</span></h2></div>
-    <div class="about-grid"><div><p>Soy egresado del CESDE como <strong>Técnico Laboral por Competencias en Asistente en Desarrollo de Software</strong> y actualmente continúo mi formación como coder de RIWI.</p><p>He estudiado tecnologías de frontend, backend y bases de datos. Busco fortalecer mis fundamentos mediante proyectos prácticos, buenas prácticas y colaboración en equipo.</p></div>
-    <aside class="note"><div class="note-icon">✳</div><h3>Mi objetivo</h3><p>Conseguir una oportunidad junior donde pueda aportar, aprender de un equipo y construir software que resuelva necesidades reales.</p></aside></div>
-  </section>
-  <section class="section soft" id="habilidades"><div class="wrap">
-    <div class="section-title"><p class="eyebrow">02 / HABILIDADES</p><h2>Tecnologías que estoy<br><span>aprendiendo y practicando.</span></h2><p class="muted">Conocimientos adquiridos en mi formación y cursos. Sigo reforzándolos con práctica y proyectos.</p></div>
-    <div class="skills">
-      <article class="skill"><div class="skill-icon orange">J</div><h3>Java</h3><p>Fundamentos de programación y orientación a objetos.</p><small>BACKEND</small></article>
-      <article class="skill"><div class="skill-icon green">SB</div><h3>Spring Boot</h3><p>Base para desarrollar servicios y aplicaciones backend.</p><small>BACKEND · API</small></article>
-      <article class="skill"><div class="skill-icon blue">JS</div><h3>JavaScript</h3><p>Lógica e interactividad para aplicaciones web.</p><small>FRONTEND</small></article>
-      <article class="skill"><div class="skill-icon cyan">⚛</div><h3>React</h3><p>Interfaces web construidas con componentes.</p><small>FRONTEND</small></article>
-      <article class="skill"><div class="skill-icon purple">SQL</div><h3>SQL Server</h3><p>Consultas y organización de información en bases de datos.</p><small>BASES DE DATOS</small></article>
-      <article class="skill"><div class="skill-icon gray">⌘</div><h3>Git y GitHub</h3><p>Control de versiones y publicación de proyectos.</p><small>HERRAMIENTAS</small></article>
+    <!-- Formación -->
+    <section class="section-space container" id="formacion">
+      <div class="section-heading mb-5">
+        <p class="eyebrow">03 / FORMACIÓN</p>
+        <h2 class="section-title">Una base para seguir<br><span>creciendo.</span></h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item row g-3">
+          <div class="col-md-3"><span class="timeline-date">COMPLETADO</span></div>
+          <div class="col-md-9">
+            <h3 class="h5">CESDE</h3>
+            <strong>Técnico Laboral por Competencias en Asistente en Desarrollo de Software</strong>
+            <p class="mb-0 mt-2">Formación técnica en fundamentos de programación y desarrollo de software.</p>
+          </div>
+        </article>
+        <article class="timeline-item row g-3">
+          <div class="col-md-3"><span class="timeline-date">ACTUALMENTE</span></div>
+          <div class="col-md-9">
+            <h3 class="h5">RIWI</h3>
+            <strong>Coder en formación de desarrollo de software</strong>
+            <p class="mb-0 mt-2">Práctica técnica, algoritmia, inglés, desarrollo y aprendizaje colaborativo.</p>
+          </div>
+        </article>
+        <article class="timeline-item row g-3">
+          <div class="col-md-3"><span class="timeline-date">CURSOS</span></div>
+          <div class="col-md-9">
+            <h3 class="h5">Platzi</h3>
+            <strong>Formación complementaria</strong>
+            <p class="mb-0 mt-2">Certificados relacionados con Java, Spring, SQL, React, Git y GitHub, seguridad web y otras áreas tecnológicas.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="card custom-card schedule-card mt-4">
+        <div class="card-body p-4 p-lg-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <p class="eyebrow mb-2">MI RUTINA EN RIWI</p>
+              <h3 class="h4">Aprender con constancia</h3>
+              <p class="card-text mb-0">Jornada académica de lunes a viernes, aproximadamente de 6:00 a. m. a 2:00 p. m.</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge tech-badge">Desarrollo</span>
+                <span class="badge tech-badge">Inglés diario</span>
+                <span class="badge tech-badge">Inteligencia artificial</span>
+                <span class="badge tech-badge">Algoritmia</span>
+                <span class="badge tech-badge">HSE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="section-space section-surface" id="proyectos">
+      <div class="container">
+        <div class="section-heading mb-5">
+          <p class="eyebrow">04 / PROYECTOS</p>
+          <h2 class="section-title">Aprender haciendo.<br><span>Construir para mejorar.</span></h2>
+          <p class="section-copy mb-0">Proyectos de práctica y ejercicios de desarrollo.</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+          <div class="col">
+            <article class="card custom-card project-card h-100">
+              <div class="project-preview preview-cash">
+                <span class="preview-label">01 / FRONTEND</span>
+                <div class="mock-window">
+                  <span>CAJERO WEB</span>
+                  <strong>$ 250.000</strong>
+                  <div class="mock-progress"><i></i></div>
+                  <small>OPERACIÓN EXITOSA ✓</small>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <span class="project-stack">React · JavaScript · CSS</span>
+                <h3 class="h5 mt-2">Cajero web</h3>
+                <p class="card-text">Interfaz para practicar componentes, interacción y lógica de una aplicación tipo cajero.</p>
+                <a class="project-link" href="https://github.com/CamiloJaramillo3112/ProyectoCajeroAutomatico" target="_blank" rel="noopener noreferrer">Proyecto tipo cajero ↗</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card custom-card project-card h-100">
+              <div class="project-preview preview-api">
+                <span class="preview-label">02 / BACKEND</span>
+                <div class="api-visual"><b>{ }</b><span>↔</span><b>DB</b></div>
+                <small class="preview-caption">API REST</small>
+              </div>
+              <div class="card-body p-4">
+                <span class="project-stack">Java · Spring Boot · SQL</span>
+                <h3 class="h5 mt-2">Red social con APIs</h3>
+                <p class="card-text">Proyecto para practicar la conexión de una interfaz con servicios y operaciones de una API.</p>
+                <a class="project-link" href="https://github.com/CamiloJaramillo3112/Red_Social_conApis" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card custom-card project-card h-100">
+              <div class="project-preview preview-react">
+                <span class="preview-label">03 / FRONTEND</span>
+                <strong>⚛</strong>
+                <small class="preview-caption">COMPONENTES + UI</small>
+              </div>
+              <div class="card-body p-4">
+                <span class="project-stack">React · CSS</span>
+                <h3 class="h5 mt-2">Gastos hormiga app</h3>
+                <p class="card-text">Aplicación de práctica para organizar y visualizar pequeños gastos cotidianos.</p>
+                <a class="project-link" href="https://github.com/CamiloJaramillo3112/app-gastos-hormiga" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section-space container" id="contacto">
+      <div class="card custom-card contact-card">
+        <div class="card-body p-4 p-lg-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <p class="eyebrow">05 / CONTACTO</p>
+              <h2 class="section-title">¿Construimos algo<br><span>interesante?</span></h2>
+              <p class="section-copy mb-0">
+                Estoy abierto a oportunidades junior, proyectos colaborativos y conexiones
+                con personas del mundo del desarrollo.
+              </p>
+            </div>
+            <div class="col-lg-5">
+              <div class="list-group list-group-flush contact-list">
+                <a class="list-group-item list-group-item-action" href="https://github.com/CamiloJaramillo3112" target="_blank" rel="noopener noreferrer">GitHub <strong>↗</strong></a>
+                <a class="list-group-item list-group-item-action" href="https://www.linkedin.com/in/camilo-p-jaramillo-mejia-9127b52a7" target="_blank" rel="noopener noreferrer">LinkedIn <strong>↗</strong></a>
+                <a class="list-group-item list-group-item-action" href="mailto:camilojaramillomejia284@gmail.com">Correo electrónico <strong>↗</strong></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container py-4 site-footer">
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3">
+      <a class="logo" href="#inicio">CJ<span>.</span></a>
+      <p class="mb-0">Diseñado y desarrollado por Camilo Jaramillo.</p>
+      <a class="back-to-top" href="#inicio">Volver arriba ↑</a>
     </div>
-  </div></section>
-  <section class="section wrap" id="formacion">
-    <div class="section-title"><p class="eyebrow">03 / FORMACIÓN</p><h2>Una base para seguir<br><span>creciendo.</span></h2></div>
-    <div class="timeline">
-      <article><span class="timeline-date">COMPLETADO</span><div><h3>CESDE</h3><b>Técnico Laboral por Competencias en Asistente en Desarrollo de Software</b><p>Formación técnica en fundamentos de programación y desarrollo de software.</p></div></article>
-      <article><span class="timeline-date">ACTUALMENTE</span><div><h3>RIWI</h3><b>Coder en formación de desarrollo de software</b><p>Práctica técnica, algoritmia, inglés, desarrollo y aprendizaje colaborativo.</p></div></article>
-      <article><span class="timeline-date">CURSOS</span><div><h3>Platzi</h3><b>Formación complementaria</b><p>Certificados relacionados con Java, Spring, SQL, React, Git y GitHub, seguridad web y otras áreas tecnológicas.</p></div></article>
-    </div>
-    <div class="schedule"><div><p class="eyebrow">MI RUTINA EN RIWI</p><h3>Aprender con constancia</h3><p>Jornada académica de lunes a viernes, aproximadamente de 6:00 a. m. a 2:00 p. m.</p></div><div class="schedule-tags"><span>Desarrollo</span><span>Inglés diario</span><span>Inteligencia artificial</span><span>Algoritmia</span><span>HSE</span></div></div>
-  </section>
-  <section class="section soft" id="proyectos"><div class="wrap">
-    <div class="section-title"><p class="eyebrow">04 / PROYECTOS</p><h2>Aprender haciendo.<br><span>Construir para mejorar.</span></h2><p class="muted">Sustituye los ejemplos por tus proyectos reales y añade los enlaces a GitHub.</p></div>
-    <div class="projects">
-      <article class="project"><div class="project-art cash"><small>01 / FRONTEND</small><div class="mock-window"><span>CAJERO WEB</span><b>$ 250.000</b><i></i><i></i><label>OPERACIÓN EXITOSA ✓</label></div></div><div class="project-body"><small>React · JavaScript · CSS</small><h3>Cajero web</h3><p>Interfaz para practicar componentes, interacción y lógica de una aplicación tipo cajero.</p><a href="https://github.com/CamiloJaramillo3112/ProyectoCajeroAutomatico.git" target="_blank">Proyecto Tipo cajero usando JavaScript ↗</a></div></article>
-      <article class="project"><div class="project-art api"><small>02 / BACKEND</small><div class="api-visual"><b>{ }</b><span>↔</span><b>DB</b></div><label>API REST</label></div><div class="project-body"><small>Java · Spring Boot · SQL</small><h3>API de gestión</h3><p>Espacio para presentar una API con operaciones CRUD, validaciones y persistencia de datos.</p><a href="https://github.com/CamiloJaramillo3112/Red_Social_conApis.git" target="_blank">Red Social tipo facebook ↗</a></div></article>
-      <article class="project"><div class="project-art react-art"><small>03 / FRONTEND</small><strong>⚛</strong><label>COMPONENTES + UI</label></div><div class="project-body"><small>React · CSS</small><h3>Interfaz web responsive</h3><p>Espacio para mostrar una página adaptable a móviles, tabletas y computadores.</p><a href="https://github.com/CamiloJaramillo3112/app-gastos-hormiga.git" target="_blank">Gastos hormiga app ↗</a></div></article>
-    </div>
-    <p class="disclaimer">Las tarjetas son ejemplos visuales editables, no afirmaciones de que todos los proyectos estén terminados. Actualiza su contenido según tu trabajo real.</p>
-  </div></section>
-  <section class="section wrap" id="contacto"><div class="contact-card"><div><p class="eyebrow">05 / CONTACTO</p><h2>¿Construimos algo<br><span>interesante?</span></h2><p>Estoy abierto a oportunidades junior, proyectos colaborativos y conexiones con personas del mundo del desarrollo.</p></div><div class="contact-links">
-    <a href="https://github.com/CamiloJaramillo3112" target="_blank" rel="noopener noreferrer">GitHub <b>↗</b></a>
-    <a href="https://www.linkedin.com/in/camilo-p-jaramillo-mejia-9127b52a7" target="_blank" rel="noopener noreferrer">LinkedIn <b>↗</b></a>
-    <a href="mailto:camilojaramillomejia284@gmail.com">Correo electrónico <b>↗</b></a>
-  </div></div></section>
-</main>
-<footer class="footer wrap"><a class="logo" href="#inicio">CJ<span>.</span></a><p>Diseñado y desarrollado por Camilo Jaramillo.</p><a href="#inicio">Volver arriba ↑</a></footer>
+  </footer>
+
+  <!-- Bootstrap Bundle: incluye el componente Collapse de la navbar -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IE0hB0Gzo9y5Bp9mYanr8Bu"
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>
